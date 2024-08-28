@@ -5,8 +5,8 @@
  *
 */
 
-public abstract class Personajes{
-    
+public abstract class Personaje{
+
     //Variables de clase
     Strategy ejecutarataque;
     private int vida;
@@ -18,7 +18,7 @@ public abstract class Personajes{
      *@param nombre el nombre del personaje
      *@param objetomagico indica si el personaje posee un objeto magico
      */
-    public Personajes(int vida, String nombre, boolean objetomagico){
+    public Personaje(int vida, String nombre, boolean objetomagico){
 	this.vida = vida;
 	this.nombre = nombre;
 	this.objetomagico = objetomagico;
@@ -74,14 +74,14 @@ public abstract class Personajes{
      * respecto las dos variables de referencia
      * para los tipos de interfaz de Strategy
      */
-    public void ejecutaEstrategy(){
+    public void ejecutarStrategy(){
 	ejecutarataque.ejecutarAtaque();
-	ejecutarataque.ejecutarDefensa();
+	//ejecutarataque.ejecutarDefensa();
     }
     
     /**
      * Establece el tipo de ataque que ejecutara el personaje
      */
     public void setAtaque(){}
-            
+
 }
