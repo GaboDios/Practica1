@@ -1,4 +1,4 @@
-public interface Strategy{
-    public void ejecutarAtaque();
-    public void ejecutarDefensa();
+public interface Strategy {
+   public void ejecutarAtaque(Personaje atacante, Personaje objetivo);
+   public void ejecutarDefensa(Personaje atacante, Personaje defendido);
 }
