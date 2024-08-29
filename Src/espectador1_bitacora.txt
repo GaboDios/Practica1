@@ -1,0 +1,4 @@
+Korby ha seleccionado el poder AtaqueFuego
+Korby ha atacado a Meganman
+Korby ha perdido 10 puntos de vida. Vida restante: 90
+¡Ganó el personaje que apoyaste!
