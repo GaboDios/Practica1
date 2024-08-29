@@ -3,7 +3,8 @@ public class TransformacionEspada implements Strategy{
     
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Se ha convertido en Espada y se ha lanzado como kamikaze contra " + objetivo.getNombre() + " causando un gran daño en el corazón.");
+        System.out.println(atacante.getNombre() + "Se ha convertido en Espada y se ha lanzado como kamikaze contra " + objetivo.getNombre() + " causando un gran daño en el corazón."
+			   + "\n La vida del " + objetivo.getNombre() + "es: " + objetivo.getVida());
         objetivo.reducirVida(10);
     }
 

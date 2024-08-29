@@ -2,7 +2,8 @@ public class BombaDeEnergia implements Strategy {
 
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Ha lanzado Bomba de Energia a " + objetivo.getNombre());
+        System.out.println(atacante.getNombre() + "Ha lanzado Bomba de Energia a " + objetivo.getNombre()
+			   + "\n La vida del " + objetivo.getNombre() + "es: " + objetivo.getVida());
         objetivo.reducirVida(10);
     }
 

@@ -2,7 +2,7 @@ public class TransformacionDragon implements Strategy {
 
      @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Se ha convertido en Dragon y ha escupido una bola de fuego a " + objetivo.getNombre() + " causando un gran daño.");
+        System.out.println(atacante.getNombre() + "Se ha convertido en Dragon y ha escupido una bola de fuego a " + objetivo.getNombre() + " causando un gran daño." + "\n La vida del " + objetivo.getNombre() + "es: " + objetivo.getVida());
         objetivo.reducirVida(10);
     }
 
