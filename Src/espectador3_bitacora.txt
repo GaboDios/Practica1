@@ -1,3 +1,48 @@
+Este espectador está apoyando a: Dittuu
+Korby ha seleccionado el poder AtaqueFuego
+Meganman ha seleccionado el poder GolpeDeRoca
 Dittuu ha seleccionado el poder CañonDeHielo
-Dittuu ha atacado a Korby
-¡Ganó el personaje que apoyaste!
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 90
+Meganman se ha defendido del ataque de Korby
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 90
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 80
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 70
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 60
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 50
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 40
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 30
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 20
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 10
+Korby ha atacado a Meganman
+Meganman ha perdido 10 puntos de vida. Vida restante: 0
+Meganman ha muerto.
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 80
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 70
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 60
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 50
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 40
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 30
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 20
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 10
+Korby ha atacado a Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 0
+Dittuu ha muerto.
+Perdió el personaje que apoyaste.

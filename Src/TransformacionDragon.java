@@ -5,6 +5,8 @@
  */
 public class TransformacionDragon implements Strategy {
 
+    private static final int DANIO_DRAGON = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje se ha transformado en dragón.
      * El atacante se convierte en dragón y lanza una bola de fuego al objetivo, causando un gran daño.
@@ -15,7 +17,7 @@ public class TransformacionDragon implements Strategy {
      @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " se ha convertido en Dragon y ha escupido una bola de fuego a " + objetivo.getNombre() + " causando un gran daño.");
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_DRAGON);
     }
 
     /**

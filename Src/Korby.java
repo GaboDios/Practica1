@@ -10,9 +10,10 @@ public class Korby extends Personaje {
      * Constructor que crea una instancia de Korby con un nombre predeterminado
      * de "Korby", 100 puntos de vida, y tres ataques predefinidos.
      */
-    public Korby() {
-        super("Korby", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo());
+    public Korby(MediadorCombate mediador) {
+        super("Korby", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
     }
+
 
     // Método getNombre() comentado para evitar redundancia con la clase base
 

@@ -4,6 +4,8 @@
  */
 public class CañonDeHielo implements Strategy {
 
+    private static final int DANIO_HIELO = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje utiliza un cañón de hielo.
      * El atacante dispara el cañón de hielo al objetivo, reduciendo su vida.
@@ -14,7 +16,7 @@ public class CañonDeHielo implements Strategy {
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con Cañon de Hielo.");
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_HIELO);
     }
 
     /**

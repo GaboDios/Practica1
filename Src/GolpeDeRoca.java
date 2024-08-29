@@ -4,6 +4,8 @@
  */
 public class GolpeDeRoca implements Strategy {
 
+    private static final int DANIO_GOLPE_ROCA = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje utiliza un golpe de roca.
      * El atacante golpea al objetivo con una roca, causando daño.
@@ -14,7 +16,7 @@ public class GolpeDeRoca implements Strategy {
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con Golpe de Roca.");
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_GOLPE_ROCA);
     }
 
     /**

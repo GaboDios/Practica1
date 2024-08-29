@@ -5,6 +5,8 @@
  */
 public class RayoElectrico implements Strategy {
 
+    private static final int DANIO_RAYO = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje utiliza un rayo eléctrico.
      * El atacante ataca al objetivo con un rayo eléctrico, reduciendo la vida del objetivo.
@@ -15,7 +17,7 @@ public class RayoElectrico implements Strategy {
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con Rayo Electrico.");
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_RAYO);
     }
 
     /**

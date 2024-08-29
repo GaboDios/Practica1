@@ -4,6 +4,8 @@
  */
 public class BombaDeEnergia implements Strategy {
 
+    private static final int DANIO_ENERGIA = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje lanza una bomba de energía.
      * El atacante lanza la bomba de energía al objetivo, causando daño.
@@ -14,7 +16,7 @@ public class BombaDeEnergia implements Strategy {
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " ha lanzado Bomba de Energia a " + objetivo.getNombre());
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_ENERGIA);
     }
 
     /**

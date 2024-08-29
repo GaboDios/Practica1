@@ -10,8 +10,8 @@ public class Dittuu extends Personaje {
      * Constructor que crea una instancia de Dittuu con un nombre predeterminado
      * de "Dittuu", 100 puntos de vida, y tres ataques predefinidos.
      */
-    public Dittuu() {
-        super("Dittuu", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo());
+    public Dittuu(MediadorCombate mediador) {
+        super("Dittuu", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
     }
 
 //    /**

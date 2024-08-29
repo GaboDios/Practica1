@@ -5,6 +5,8 @@
  */
 public class TransformacionEspada implements Strategy{
 
+    private static final int DANIO_ESPADA = 10;
+
     /**
      * Ejecuta el ataque cuando el personaje se ha transformado en una espada.
      * El atacante se convierte en espada y se lanza como un kamikaze contra el objetivo, causando un gran daño.
@@ -15,7 +17,7 @@ public class TransformacionEspada implements Strategy{
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
         System.out.println(atacante.getNombre() + " se ha convertido en Espada y se ha lanzado como kamikaze contra " + objetivo.getNombre() + " causando un gran daño en el corazón.");
-        objetivo.reducirVida(10);
+        objetivo.reducirVida(DANIO_ESPADA);
     }
 
     /**

@@ -13,9 +13,11 @@ public abstract class Personaje {
     protected Strategy poder2;
     protected Strategy poder3;
     protected Strategy poderActual;
-    
-    // Lista de observadores
-    private List<Observador> observadores = new ArrayList<>();
+//    // Lista de observadores
+//    private List<Observador> observadores = new ArrayList<>();
+
+    // Mediador para manejar las notificaciones a los observadores
+    private MediadorCombate mediador;
 
     /**
      * Constructor para inicializar un personaje con su nombre, vida y tres estrategias de poder.
@@ -26,34 +28,43 @@ public abstract class Personaje {
      * @param poder2 La segunda estrategia de poder.
      * @param poder3 La tercera estrategia de poder.
      */
-    public Personaje(String nombre, int vida, Strategy poder1, Strategy poder2, Strategy poder3) {
+    public Personaje(String nombre, int vida, Strategy poder1, Strategy poder2, Strategy poder3,MediadorCombate mediador) {
         this.nombre = nombre;
         this.vida = vida;
         this.poder1 = poder1;
         this.poder2 = poder2;
         this.poder3 = poder3;
         this.poderActual = poder1; // Por defecto selecciona el primer poder
+        this.mediador = mediador;
+
     }
 
+//    /**
+//     * Agrega un observador a la lista de observadores del personaje.
+//     *
+//     * @param observador El observador que se añadirá a la lista.
+//     */
+//    public void agregarObservador(Observador observador) {
+//        observadores.add(observador);
+//    }
     /**
-     * Agrega un observador a la lista de observadores del personaje.
-     *
-     * @param observador El observador que se añadirá a la lista.
-     */
-    public void agregarObservador(Observador observador) {
-        observadores.add(observador);
-    }
-
-    /**
-     * Notifica a todos los observadores registrados sobre un evento o cambio en el estado del personaje.
+     * Notifica a los observadores a través del mediador.
      *
      * @param mensaje El mensaje que será enviado a los observadores.
      */
-    private void notificarObservadores(String mensaje) {
-        for (Observador observador : observadores) {
-            observador.actualizar(mensaje);
-        }
+    protected void notificar(String mensaje) {
+        mediador.notificar(nombre, mensaje);
     }
+//    /**
+//     * Notifica a todos los observadores registrados sobre un evento o cambio en el estado del personaje.
+//     *
+//     * @param mensaje El mensaje que será enviado a los observadores.
+//     */
+//    private void notificarObservadores(String mensaje) {
+//        for (Observador observador : observadores) {
+//            observador.actualizar(mensaje);
+//        }
+//    }
 
     /**
      * Obtiene la vida actual del personaje.
@@ -93,7 +104,7 @@ public abstract class Personaje {
                 System.out.println("Poder no válido");
                 break;
         }
-        notificarObservadores(nombre + " ha seleccionado el poder " + poderActual.getClass().getSimpleName());
+        notificar(nombre + " ha seleccionado el poder " + poderActual.getClass().getSimpleName());
     }
 
     /**
@@ -102,9 +113,21 @@ public abstract class Personaje {
      * @param objetivo El personaje que será atacado.
      */
     public void realizarAtaque(Personaje objetivo) {
+        if (this.vida <= 0) {
+            notificar(nombre + " está muerto y no puede atacar.");
+            return;
+        }
+
+        if (objetivo.getVida() <= 0) {
+            notificar(nombre + " intentó atacar a " + objetivo.getNombre() + ", pero " + objetivo.getNombre() + " ya está muerto.");
+            return;
+        }
+
+        // Notificar primero que se ha realizado un ataque
+        notificar(nombre + " ha atacado a " + objetivo.getNombre());
+
         if (poderActual != null) {
             poderActual.ejecutarAtaque(this, objetivo);
-            notificarObservadores(nombre + " ha atacado a " + objetivo.getNombre());
         } else {
             System.out.println("No se ha seleccionado un poder");
         }
@@ -116,9 +139,14 @@ public abstract class Personaje {
      * @param atacante El personaje que realiza el ataque que será defendido.
      */
     public void realizarDefensa(Personaje atacante) {
+        if (this.vida <= 0) {
+            notificar(nombre + " está muerto y no puede defenderse.");
+            return;
+        }
+
         if (poderActual != null) {
             poderActual.ejecutarDefensa(atacante, this);
-            notificarObservadores(nombre + " se ha defendido del ataque de " + atacante.getNombre());
+            notificar(nombre + " se ha defendido del ataque de " + atacante.getNombre());
         } else {
             System.out.println("No se ha seleccionado un poder");
         }
@@ -131,11 +159,16 @@ public abstract class Personaje {
      * @param n La cantidad de vida que se reducirá.
      */
     public void reducirVida(int n) {
+        if (vida <= 0) {
+            notificar(nombre + " ya está muerto y no puede recibir más daño.");
+            return;
+        }
+
         this.vida -= n;
-        notificarObservadores(nombre + " ha perdido " + n + " puntos de vida. Vida restante: " + vida);
+        notificar(nombre + " ha perdido " + n + " puntos de vida. Vida restante: " + vida);
 
         if (vida <= 0) {
-            notificarObservadores(nombre + " ha muerto.");
+            notificar(nombre + " ha muerto.");
         }
     }
     /**

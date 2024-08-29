@@ -10,10 +10,10 @@ public class Meganman extends Personaje {
      * Constructor que crea una instancia de Meganman con un nombre predeterminado
      * de "Meganman", 100 puntos de vida, y tres ataques predefinidos.
      */
-    public Meganman() {
-        super("Meganman", 100, new BombaDeEnergia(), new GolpeDeRoca(), new RayoElectrico());
+    public Meganman(MediadorCombate mediador) {
+        super("Meganman", 100, new BombaDeEnergia(), new GolpeDeRoca(), new RayoElectrico(), mediador);
     }
-
+    
 //    /**
 //     * Retorna el nombre del personaje.
 //     *
