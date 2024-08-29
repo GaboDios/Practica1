@@ -1,7 +1,7 @@
 public class Korby extends Personaje {
 
     public Korby() {
-        super("Korby", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo());
+        super("Korby", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CanonDeHielo());
     }
 
     @Override

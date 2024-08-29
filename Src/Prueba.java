@@ -7,6 +7,7 @@ public class Prueba {
         xd.seleccionarPoder(1);
 
         xd.realizarAtaque(xddd);
+        xd.realizarDefensa(xdd);
     }
     
 }
