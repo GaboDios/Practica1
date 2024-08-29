@@ -1,5 +1,3 @@
-import Src.Strategy;
-
 public class RayoElectrico implements Strategy {
 
     @Override

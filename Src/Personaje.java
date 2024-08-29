@@ -74,8 +74,8 @@ public abstract class Personaje{
      * respecto las dos variables de referencia
      * para los tipos de interfaz de Strategy
      */
-    public void ejecutarStrategy(){
-	ejecutarataque.ejecutarAtaque();
+    public void ejecutarStrategy(Personaje pero, Personaje per){
+	ejecutarataque.ejecutarAtaque(pero, per);
 	//ejecutarataque.ejecutarDefensa();
     }
     
