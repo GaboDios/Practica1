@@ -1,5 +1,3 @@
-import Src.Strategy;
-
 public class CañonDeHielo implements Strategy{
 
      @Override
@@ -10,7 +8,7 @@ public class CañonDeHielo implements Strategy{
 
     @Override
     public void ejecutarDefensa(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre + " con Cañon de Hielo pero " + objetivo.getNombre + " ha defendido");
+        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre() + " con Cañon de Hielo pero " + objetivo.getNombre() + " ha defendido");
     }
 
     

@@ -1,5 +1,3 @@
-import Src.Strategy;
-
 public class RayoElectrico implements Strategy {
 
     @Override
@@ -10,7 +8,7 @@ public class RayoElectrico implements Strategy {
 
     @Override
     public void ejecutarDefensa(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre + " con Rayo Electrico, pero " + objetivo.getNombre + " ha defendido");
+        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre() + " con Rayo Electrico, pero " + objetivo.getNombre() + " ha defendido");
     }
 
     

@@ -9,7 +9,7 @@ public class TransformacionEspada implements Strategy{
 
     @Override
     public void ejecutarDefensa(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Se ha convertido en Espada y se ha lanzado como kamikaze contra " + objetivo.getNombre + " pero " + objetivo.getNombre + " ha defendido esquivandolo");
+        System.out.println(atacante.getNombre() + "Se ha convertido en Espada y se ha lanzado como kamikaze contra " + objetivo.getNombre() + " pero " + objetivo.getNombre() + " ha defendido esquivandolo");
     }
     
 }

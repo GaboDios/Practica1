@@ -1,5 +1,3 @@
-import Src.Strategy;
-
 public class GolpeDeRoca implements Strategy {
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
@@ -9,7 +7,7 @@ public class GolpeDeRoca implements Strategy {
 
     @Override
     public void ejecutarDefensa(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre + " con Golpe de Roca, pero " + objetivo.getNombre + " ha defendido");
+        System.out.println(atacante.getNombre() + "Ha atacado a " + objetivo.getNombre() + " con Golpe de Roca, pero " + objetivo.getNombre() + " ha defendido");
     }
     
 }
