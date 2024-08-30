@@ -1,5 +1,5 @@
 Nombre del Equipo: 
-                      equipo sin nombre 2
+                      Los hijos de Korhal
 
 Integrantes del Equipo:                                    Numero de cuenta
 
