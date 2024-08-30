@@ -9,13 +9,15 @@ public class BombaDeEnergia implements Strategy {
     /**
      * Ejecuta el ataque cuando el personaje lanza una bomba de energía.
      * El atacante lanza la bomba de energía al objetivo, causando daño.
+     * Y se notifica a la bitácora.
      *
      * @param atacante El personaje que realiza el ataque.
      * @param objetivo El personaje que recibe el ataque.
      */
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + " ha lanzado Bomba de Energia a " + objetivo.getNombre());
+        String mensaje = " ha lanzado una Bomba de Energía a  " + objetivo.getNombre();
+        atacante.notificar(atacante.getNombre() + mensaje);
         objetivo.reducirVida(DANIO_ENERGIA);
     }
 

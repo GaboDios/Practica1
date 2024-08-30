@@ -13,10 +13,7 @@ public abstract class Personaje {
     protected Strategy poder2;
     protected Strategy poder3;
     protected Strategy poderActual;
-//    // Lista de observadores
-//    private List<Observador> observadores = new ArrayList<>();
 
-    // Mediador para manejar las notificaciones a los observadores
     private MediadorCombate mediador;
 
     /**
@@ -27,6 +24,7 @@ public abstract class Personaje {
      * @param poder1 La primera estrategia de poder.
      * @param poder2 La segunda estrategia de poder.
      * @param poder3 La tercera estrategia de poder.
+     * @param mediador El mediador que gestiona las interacciones del combate entre los personajes.
      */
     public Personaje(String nombre, int vida, Strategy poder1, Strategy poder2, Strategy poder3,MediadorCombate mediador) {
         this.nombre = nombre;
@@ -39,32 +37,16 @@ public abstract class Personaje {
 
     }
 
-//    /**
-//     * Agrega un observador a la lista de observadores del personaje.
-//     *
-//     * @param observador El observador que se añadirá a la lista.
-//     */
-//    public void agregarObservador(Observador observador) {
-//        observadores.add(observador);
-//    }
     /**
      * Notifica a los observadores a través del mediador.
+     * También imprime el mensaje en la consola.
      *
      * @param mensaje El mensaje que será enviado a los observadores.
      */
     protected void notificar(String mensaje) {
         mediador.notificar(nombre, mensaje);
+        System.out.println(mensaje);
     }
-//    /**
-//     * Notifica a todos los observadores registrados sobre un evento o cambio en el estado del personaje.
-//     *
-//     * @param mensaje El mensaje que será enviado a los observadores.
-//     */
-//    private void notificarObservadores(String mensaje) {
-//        for (Observador observador : observadores) {
-//            observador.actualizar(mensaje);
-//        }
-//    }
 
     /**
      * Obtiene la vida actual del personaje.
@@ -86,6 +68,7 @@ public abstract class Personaje {
 
     /**
      * Permite al personaje seleccionar uno de sus tres poderes para ser utilizado en el próximo ataque o defensa.
+     * Y notifica a la bitácora de este cambio.
      *
      * @param numeroPoder El número del poder que se desea seleccionar (1, 2, o 3).
      */
@@ -109,6 +92,8 @@ public abstract class Personaje {
 
     /**
      * Realiza un ataque usando el poder actualmente seleccionado contra otro personaje.
+     * Si el personaje o el objetivo está muerto, no se realiza el ataque.
+     * Notifica a la bitácora de este evento.
      *
      * @param objetivo El personaje que será atacado.
      */
@@ -124,7 +109,7 @@ public abstract class Personaje {
         }
 
         // Notificar primero que se ha realizado un ataque
-        notificar(nombre + " ha atacado a " + objetivo.getNombre());
+        //notificar(nombre + " ha atacado a " + objetivo.getNombre());
 
         if (poderActual != null) {
             poderActual.ejecutarAtaque(this, objetivo);
@@ -135,6 +120,7 @@ public abstract class Personaje {
 
     /**
      * Realiza una defensa usando el poder actualmente seleccionado contra un ataque recibido.
+     * Si el personaje está muerto, no se realiza la defensa.
      *
      * @param atacante El personaje que realiza el ataque que será defendido.
      */
@@ -155,6 +141,8 @@ public abstract class Personaje {
     /**
      * Reduce la vida del personaje en una cantidad especificada y notifica a los observadores.
      * Si la vida del personaje cae a 0 o menos, se notifica que el personaje ha muerto.
+     * Si el personaje ya está muerto, no se reduce más su vida.
+     * Y se notifica a la bitácora de esta reduccion de vida.
      *
      * @param n La cantidad de vida que se reducirá.
      */

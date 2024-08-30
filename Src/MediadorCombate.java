@@ -3,11 +3,14 @@ import java.util.List;
 
 /**
  * La clase {@code MediadorCombate} se encarga de gestionar las notificaciones de eventos de combate
- * a todos los espectadores registrados.
+ * a todos los espectadores registrados. Esta clase facilita la comunicación entre los personajes y los espectadores.
  */
 public class MediadorCombate {
     private List<Observador> espectadores;
 
+    /**
+     * Constructor que inicializa el mediador de combate con una lista vacía de espectadores.
+     */
     public MediadorCombate() {
         espectadores = new ArrayList<>();
     }
@@ -25,6 +28,7 @@ public class MediadorCombate {
      * Notifica a todos los espectadores sobre un evento del combate.
      *
      * @param evento El mensaje que describe el evento del combate.
+     * @param personajeInvolucrado El nombre del personaje involucrado en el evento.
      */
     public void notificar(String evento, String personajeInvolucrado) {
         for (Observador espectador : espectadores) {
@@ -36,7 +40,7 @@ public class MediadorCombate {
     /**
      * Finaliza el combate, notificando el resultado a todos los espectadores.
      *
-     * @param resultadoFinal El resultado final del combate.
+     * @param ganoPersonajeApoyado Indica si el personaje apoyado por los espectadores ganó el combate.
      */
     public void finalizarCombate(boolean ganoPersonajeApoyado) {
         for (Observador espectador : espectadores) {
@@ -46,6 +50,10 @@ public class MediadorCombate {
         }
     }
 
+    /**
+     * Apaga el mediador, notificando a todos los espectadores que el combate ha terminado.
+     * Este método asegura que no se envíen más notificaciones después de que el combate finaliza.
+     */
     public void shutdown() {
         for (Observador espectador : espectadores) {
             if (espectador instanceof Espectador) {

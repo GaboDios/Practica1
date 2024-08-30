@@ -10,13 +10,15 @@ public class RayoElectrico implements Strategy {
     /**
      * Ejecuta el ataque cuando el personaje utiliza un rayo eléctrico.
      * El atacante ataca al objetivo con un rayo eléctrico, reduciendo la vida del objetivo.
+     * Y se notifica el evento a la bitácora.
      *
      * @param atacante El personaje que realiza el ataque.
      * @param objetivo El personaje que recibe el ataque.
      */
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con Rayo Electrico.");
+        String mensaje = "ha atacado con un Rayo Electrico a "+ objetivo.getNombre();
+        atacante.notificar(atacante.getNombre()+mensaje);
         objetivo.reducirVida(DANIO_RAYO);
     }
 

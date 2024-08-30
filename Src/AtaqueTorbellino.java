@@ -9,13 +9,15 @@ public class AtaqueTorbellino implements Strategy {
     /**
      * Ejecuta el ataque cuando el personaje utiliza un ataque de torbellino.
      * El atacante ataca al objetivo con un torbellino, reduciendo la vida del objetivo.
+     * Y se notifica a la bitácora.
      *
      * @param atacante El personaje que realiza el ataque.
      * @param objetivo El personaje que recibe el ataque.
      */
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con Ataque Torbellino.");
+        String mensaje = " ha atacado a  " + objetivo.getNombre()+" con un ataque torbellino";
+        atacante.notificar(atacante.getNombre() + mensaje);
         objetivo.reducirVida(DANIO_TORBELLINO);
     }
 

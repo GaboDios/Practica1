@@ -7,7 +7,8 @@
 public interface Strategy {
 
    /**
-    * Ejecuta la acción de ataque utilizando la estrategia específica.
+    * Ejecuta la acción de ataque utilizando el método específico en cada uno de los casos.
+    * Este método debe ser implementado para definir cómo un personaje ataca a otro.
     *
     * @param atacante El personaje que realiza el ataque.
     * @param objetivo El personaje que recibe el ataque.
@@ -15,7 +16,8 @@ public interface Strategy {
    public void ejecutarAtaque(Personaje atacante, Personaje objetivo);
 
    /**
-    * Ejecuta la acción de defensa utilizando la estrategia específica.
+    * Ejecuta la acción de defensa utilizando un método especifico en cada uno de los casos.
+    * Este método debe de ser implementado para definir cómo un personaje se defiende un ataque de otro personaje.
     *
     * @param atacante El personaje que realiza el ataque.
     * @param defendido El personaje que defiende el ataque.

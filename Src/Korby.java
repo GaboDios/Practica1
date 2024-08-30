@@ -8,18 +8,12 @@ public class Korby extends Personaje {
 
     /**
      * Constructor que crea una instancia de Korby con un nombre predeterminado
-     * de "Korby", 100 puntos de vida, y tres ataques predefinidos.
+     * de "Korby", 100 puntos de vida, y tres ataques predefinidos: Ataque de Fuego,
+     * Ataque Torbellino y Cañón de Hielo.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate entre los personajes.
      */
     public Korby(MediadorCombate mediador) {
         super("Korby", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
     }
-
-
-    // Método getNombre() comentado para evitar redundancia con la clase base
-
-    // Si se requiere sobrescribir el método getNombre(), se puede descomentar este bloque
-    // @Override
-    // public String getNombre() {
-    //     return "Korby";
-    // }
 }

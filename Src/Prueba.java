@@ -2,9 +2,21 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * La clase {@code Prueba} contiene el método principal para ejecutar el programa
+ * que simula diferentes escenarios de combate entre personajes. Permite al usuario
+ * seleccionar un escenario de combate y visualizar los resultados.
+ */
+
 public class Prueba {
+    /**
+     * El método principal que inicia el programa, permite al usuario seleccionar
+     * un escenario de combate y maneja la interacción con el usuario.
+     *
+     * @param args Los argumentos de la línea de comandos (no utilizados).
+     */
     public static void main(String[] args) {
-        // Crear mediador
+
         MediadorCombate mediador = new MediadorCombate();
 
         Scanner scanner = new Scanner(System.in);
@@ -36,11 +48,13 @@ public class Prueba {
             System.out.println();
         } while (opcion != 5);
 
-        // Apagar el mediador (opcional, dependiendo de si se reutiliza en otra parte)
         mediador.shutdown();
         scanner.close();
     }
 
+    /**
+     * Muestra el menú de opciones en la consola para que el usuario seleccione un escenario de combate.
+     */
     private static void mostrarMenu() {
         System.out.println("===== Menú de Escenarios de Combate =====");
         System.out.println("1. Escenario: Korby Gana");
@@ -51,6 +65,13 @@ public class Prueba {
         System.out.print("Elige una opción: ");
     }
 
+    /**
+     * Simula un escenario de combate donde Korby es el ganador.
+     * Se crean los personajes, los espectadores y se registran en el mediador.
+     * Luego, se simula el combate hasta que Korby gana.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate.
+     */
     public static void escenarioKorbyGana(MediadorCombate mediador) {
         // Crear personajes
         Personaje korby = new Korby(mediador);
@@ -67,17 +88,14 @@ public class Prueba {
         mediador.registrarEspectador(espectador2);
         mediador.registrarEspectador(espectador3);
 
-
-        // Simular combate donde Korby gana
-        korby.seleccionarPoder(1);  // Poder fuerte
+        korby.seleccionarPoder(1);
         meganman.seleccionarPoder(2);
         dittuu.seleccionarPoder(3);
 
-        korby.realizarAtaque(meganman);  // Korby ataca a Meganman
-        meganman.realizarDefensa(korby); // Meganman defiende
-        korby.realizarAtaque(dittuu);    // Korby ataca a Dittuu
+        korby.realizarAtaque(meganman);
+        meganman.realizarDefensa(korby);
+        korby.realizarAtaque(dittuu);
 
-        // Forzar los resultados para asegurarnos de que Korby gane
         while (meganman.getVida() > 0) {
             korby.realizarAtaque(meganman);
         }
@@ -90,6 +108,13 @@ public class Prueba {
         espectador3.finalizarCombate(false);
     }
 
+    /**
+     * Simula un escenario de combate donde Meganman es el ganador.
+     * Se crean los personajes, los espectadores y se registran en el mediador.
+     * Luego, se simula el combate hasta que Meganman gana.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate.
+     */
     public static void escenarioMeganmanGana(MediadorCombate mediador) {
         // Crear personajes
         Personaje korby = new Korby(mediador);
@@ -106,17 +131,14 @@ public class Prueba {
         mediador.registrarEspectador(espectador2);
         mediador.registrarEspectador(espectador3);
 
-
-        // Simular combate donde Meganman gana
-        meganman.seleccionarPoder(1);  // Poder fuerte
+        meganman.seleccionarPoder(1);
         korby.seleccionarPoder(2);
         dittuu.seleccionarPoder(3);
 
-        meganman.realizarAtaque(korby); // Meganman ataca a Korby
-        korby.realizarDefensa(meganman); // Korby defiende
-        meganman.realizarAtaque(dittuu); // Meganman ataca a Dittuu
+        meganman.realizarAtaque(korby);
+        korby.realizarDefensa(meganman);
+        meganman.realizarAtaque(dittuu);
 
-        // Forzar los resultados para asegurarnos de que Meganman gane
         while (korby.getVida() > 0) {
             meganman.realizarAtaque(korby);
         }
@@ -129,6 +151,13 @@ public class Prueba {
         espectador3.finalizarCombate(false);
     }
 
+    /**
+     * Simula un escenario de combate donde Dittuu es el ganador.
+     * Se crean los personajes, los espectadores y se registran en el mediador.
+     * Luego, se simula el combate hasta que Dittuu gana.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate.
+     */
     public static void escenarioDittuuGana(MediadorCombate mediador) {
         // Crear personajes
         Personaje korby = new Korby(mediador);
@@ -145,17 +174,14 @@ public class Prueba {
         mediador.registrarEspectador(espectador2);
         mediador.registrarEspectador(espectador3);
 
-
-        // Simular combate donde Dittuu gana
-        dittuu.seleccionarPoder(1);  // Poder fuerte
+        dittuu.seleccionarPoder(1);
         korby.seleccionarPoder(2);
         meganman.seleccionarPoder(3);
 
-        dittuu.realizarAtaque(korby); // Dittuu ataca a Korby
-        korby.realizarDefensa(dittuu); // Korby defiende
-        dittuu.realizarAtaque(meganman); // Dittuu ataca a Meganman
+        dittuu.realizarAtaque(korby);
+        korby.realizarDefensa(dittuu);
+        dittuu.realizarAtaque(meganman);
 
-        // Forzar los resultados para asegurarnos de que Dittuu gane
         while (korby.getVida() > 0) {
             dittuu.realizarAtaque(korby);
         }
@@ -168,6 +194,13 @@ public class Prueba {
         espectador3.finalizarCombate(true);  // Dittuu gana
     }
 
+    /**
+     * Simula un combate aleatorio entre los personajes.
+     * Los personajes se atacan entre sí hasta que solo queda uno con vida.
+     * El combate es registrado por los espectadores, y el mediador gestiona las interacciones.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate.
+     */
     public static void escenarioAleatorio(MediadorCombate mediador) {
         // Crear personajes y añadirlos a una lista
         List<Personaje> personajes = new ArrayList<>();
@@ -194,45 +227,22 @@ public class Prueba {
         dittuu.seleccionarPoder((int) (Math.random() * 3) + 1);
 
         while (personajes.size() > 1) {
-            int atacante = (int) (Math.random() * 3);
-            int atacado = (int) (Math.random() * 3);
+            int atacante = (int) (Math.random() * personajes.size());
+            int atacado = (int) (Math.random() * personajes.size());
 
+            Personaje atacantePresonaje = personajes.get(atacante);
+            Personaje atacadoPersonaje = personajes.get(atacado);
 
-            switch (atacante) {
-                case 0:
-                    if (atacado ==0) {
-                        korby.seleccionarPoder((int) (Math.random() * 3) + 1);
-                    }else if (atacado == 1) {
-                            korby.realizarAtaque(meganman);
-                        } else if (atacado == 2) {
-                            korby.realizarAtaque(dittuu);
-                        }
-                    break;
-                case 1:
-                    if (atacado == 0) {
-                        meganman.realizarAtaque(korby);
-                    } else if (atacado == 1) {
-                        meganman.seleccionarPoder((int) (Math.random() * 3) + 1);
-                    }else if  (atacado == 2) {
-                        meganman.realizarAtaque(dittuu);
-                    }
-                    break;
-                case 2:
-                    if (atacado == 0) {
-                        dittuu.realizarAtaque(korby);
-                    } else if (atacado == 1) {
-                        dittuu.realizarAtaque(meganman);
-                    } else if (atacado == 2) {
-                        dittuu.seleccionarPoder((int) (Math.random() * 3) + 1);
-                    }
-                    break;
+            if(atacantePresonaje==atacadoPersonaje){
+                atacantePresonaje.seleccionarPoder((int) (Math.random() * 3) + 1);
+            } else {
+                atacantePresonaje.realizarAtaque(atacadoPersonaje);
             }
 
             // Verificar si el atacado ha muerto y eliminarlo si es necesario
-            Personaje atacadoPersonaje = personajes.get(atacado);
+            Personaje PersonajeVerif = personajes.get(atacado);
             if (atacadoPersonaje.getVida() <= 0) {
                 personajes.remove(atacadoPersonaje);
-                mediador.notificar(atacadoPersonaje.getNombre(), atacadoPersonaje.getNombre() + " ha sido eliminado del combate.");
             }
         }
 

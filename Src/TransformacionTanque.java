@@ -10,6 +10,7 @@ public class TransformacionTanque implements Strategy{
     /**
      * Ejecuta el ataque cuando el personaje se ha transformado en tanque.
      * El atacante lanza un proyectil al objetivo causando un gran daño.
+     * Y se notifica a la bitácora.
      *
      * @paramn atacante El personaje que realiza el ataque.
      * @param objetivo El personaje que recibe el ataque.
@@ -17,7 +18,8 @@ public class TransformacionTanque implements Strategy{
 
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + " se ha convertido en Tanque y ha lanzado un proyectil a " + objetivo.getNombre() + " causando un gran daño.");
+        String mensaje = " se ha convertido en Tanque y ha lanzado un proyectil a " + objetivo.getNombre()+" causando un gran daño";
+        atacante.notificar(atacante.getNombre() + mensaje);
         objetivo.reducirVida(DANIO_TANQUE);
     }
 

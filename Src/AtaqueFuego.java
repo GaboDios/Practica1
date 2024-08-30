@@ -10,13 +10,15 @@ public class AtaqueFuego implements Strategy {
     /**
      * Ejecuta el ataque cuando el personaje utiliza fuego.
      * El personaje ataca al objetivo con fuego, reduciendo la vida del objetivo.
+     * Y se notifica este evento en la bitácora.
      *
      * @param atacante El personaje que realiza el ataque.
      * @param objetivo El personaje que recibe el ataque.
      */
     @Override
     public void ejecutarAtaque(Personaje atacante, Personaje objetivo) {
-        System.out.println(atacante.getNombre() + " ha atacado a " + objetivo.getNombre() + " con fuego.");
+        String mensaje = " ha lanzado un ataque de fuego hacia " + objetivo.getNombre();
+        atacante.notificar(atacante.getNombre() + mensaje);
         objetivo.reducirVida(DANIO_FUEGO);
     }
 

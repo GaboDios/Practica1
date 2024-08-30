@@ -8,19 +8,12 @@ public class Dittuu extends Personaje {
 
     /**
      * Constructor que crea una instancia de Dittuu con un nombre predeterminado
-     * de "Dittuu", 100 puntos de vida, y tres ataques predefinidos.
+     * de "Dittuu", 100 puntos de vida, y tres ataques predefinidos: Ataque de Fuego,
+     * Ataque Torbellino y Cañón de Hielo.
+     *
+     * @param mediador El mediador que gestiona las interacciones del combate entre los personajes.
      */
     public Dittuu(MediadorCombate mediador) {
         super("Dittuu", 100, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
     }
-
-//    /**
-//     * Retorna el nombre del personaje.
-//     *
-//     * @return El nombre "Dittuu".
-//     */
-//    @Override
-//    public String getNombre() {
-//        return "Dittuu";
-//    }
 }
