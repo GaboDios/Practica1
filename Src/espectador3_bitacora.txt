@@ -1,74 +1,75 @@
 Este espectador está apoyando a: Dittuu
 Korby ha seleccionado el poder CañonDeHielo
-Meganman ha seleccionado el poder RayoElectrico
+Meganman ha seleccionado el poder BombaDeEnergia
 Dittuu ha seleccionado el poder CañonDeHielo
-Meganman ha seleccionado el poder GolpeDeRoca
-Dittuu ha lanzado atacado a Korby con cañon de hielo.
+Meganman ha lanzado una Bomba de Energía a  Korby
 Korby ha perdido 10 puntos de vida. Vida restante: 90
-Korby ha seleccionado el poder AtaqueFuego
-Dittuu ha lanzado atacado a Korby con cañon de hielo.
-Korby ha perdido 10 puntos de vida. Vida restante: 80
-Korby ha lanzado un ataque de fuego hacia Dittuu
-Dittuu ha perdido 10 puntos de vida. Vida restante: 90
-Korby ha lanzado un ataque de fuego hacia Dittuu
-Dittuu ha perdido 10 puntos de vida. Vida restante: 80
-Korby ha lanzado un ataque de fuego hacia Dittuu
-Dittuu ha perdido 10 puntos de vida. Vida restante: 70
-Meganman ha atacado a  Dittuu con Golpe de Roca.
-Dittuu ha perdido 10 puntos de vida. Vida restante: 60
-Korby ha lanzado un ataque de fuego hacia Dittuu
-Dittuu ha perdido 10 puntos de vida. Vida restante: 50
-Meganman ha atacado a  Korby con Golpe de Roca.
-Korby ha perdido 10 puntos de vida. Vida restante: 70
-Meganman ha atacado a  Korby con Golpe de Roca.
-Korby ha perdido 10 puntos de vida. Vida restante: 60
-Korby ha lanzado un ataque de fuego hacia Dittuu
-Dittuu ha perdido 10 puntos de vida. Vida restante: 40
-Meganman ha atacado a  Dittuu con Golpe de Roca.
-Dittuu ha perdido 10 puntos de vida. Vida restante: 30
-Korby ha seleccionado el poder AtaqueFuego
-Korby ha seleccionado el poder AtaqueTorbellino
 Dittuu ha lanzado atacado a Meganman con cañon de hielo.
 Meganman ha perdido 10 puntos de vida. Vida restante: 90
-Dittuu ha seleccionado el poder CañonDeHielo
+Dittuu ha lanzado atacado a Meganman con cañon de hielo.
+Meganman ha perdido 10 puntos de vida. Vida restante: 80
+Meganman ha seleccionado el poder RayoElectrico
+Dittuu ha lanzado atacado a Meganman con cañon de hielo.
+Meganman ha perdido 10 puntos de vida. Vida restante: 70
+Korby ha seleccionado el poder CañonDeHielo
+Dittuu ha lanzado atacado a Meganman con cañon de hielo.
+Meganman ha perdido 10 puntos de vida. Vida restante: 60
+Meganman ha seleccionado el poder GolpeDeRoca
+Korby ha lanzado atacado a Meganman con cañon de hielo.
+Meganman ha perdido 10 puntos de vida. Vida restante: 50
+Meganman ha atacado a  Dittuu con Golpe de Roca.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 90
+Dittuu ha lanzado atacado a Meganman con cañon de hielo.
+Meganman ha perdido 10 puntos de vida. Vida restante: 40
+Dittuu ha seleccionado el poder AtaqueTorbellino
+Meganman ha atacado a  Dittuu con Golpe de Roca.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 80
+Korby ha lanzado atacado a Dittuu con cañon de hielo.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 70
+Dittuu ha seleccionado el poder AtaqueTorbellino
+Meganman ha seleccionado el poder RayoElectrico
+Meganman ha seleccionado el poder GolpeDeRoca
+Dittuu ha atacado a  Meganman con un ataque torbellino
+Meganman ha perdido 10 puntos de vida. Vida restante: 30
+Korby ha seleccionado el poder AtaqueTorbellino
+Meganman ha atacado a  Dittuu con Golpe de Roca.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 60
+Dittuu ha seleccionado el poder AtaqueTorbellino
+Dittuu ha atacado a  Meganman con un ataque torbellino
+Meganman ha perdido 10 puntos de vida. Vida restante: 20
+Meganman ha atacado a  Dittuu con Golpe de Roca.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 50
+Meganman ha seleccionado el poder BombaDeEnergia
+Korby ha atacado a  Meganman con un ataque torbellino
+Meganman ha perdido 10 puntos de vida. Vida restante: 10
+Meganman ha lanzado una Bomba de Energía a  Dittuu
+Dittuu ha perdido 10 puntos de vida. Vida restante: 40
+Dittuu ha seleccionado el poder AtaqueTorbellino
+Meganman ha seleccionado el poder BombaDeEnergia
+Meganman ha lanzado una Bomba de Energía a  Korby
+Korby ha perdido 10 puntos de vida. Vida restante: 80
+Meganman ha seleccionado el poder GolpeDeRoca
 Meganman ha atacado a  Korby con Golpe de Roca.
+Korby ha perdido 10 puntos de vida. Vida restante: 70
+Meganman ha atacado a  Dittuu con Golpe de Roca.
+Dittuu ha perdido 10 puntos de vida. Vida restante: 30
+Dittuu ha atacado a  Korby con un ataque torbellino
+Korby ha perdido 10 puntos de vida. Vida restante: 60
+Korby ha atacado a  Dittuu con un ataque torbellino
+Dittuu ha perdido 10 puntos de vida. Vida restante: 20
+Dittuu ha atacado a  Korby con un ataque torbellino
 Korby ha perdido 10 puntos de vida. Vida restante: 50
 Meganman ha atacado a  Dittuu con Golpe de Roca.
-Dittuu ha perdido 10 puntos de vida. Vida restante: 20
-Korby ha atacado a  Meganman con un ataque torbellino
-Meganman ha perdido 10 puntos de vida. Vida restante: 80
-Meganman ha atacado a  Dittuu con Golpe de Roca.
 Dittuu ha perdido 10 puntos de vida. Vida restante: 10
-Dittuu ha lanzado atacado a Korby con cañon de hielo.
+Meganman ha seleccionado el poder RayoElectrico
+Dittuu ha atacado a  Korby con un ataque torbellino
 Korby ha perdido 10 puntos de vida. Vida restante: 40
-Korby ha seleccionado el poder AtaqueFuego
-Meganman ha atacado a  Korby con Golpe de Roca.
-Korby ha perdido 10 puntos de vida. Vida restante: 30
-Meganman ha atacado a  Korby con Golpe de Roca.
-Korby ha perdido 10 puntos de vida. Vida restante: 20
-Korby ha lanzado un ataque de fuego hacia Dittuu
+Korby ha atacado a  Meganman con un ataque torbellino
+Meganman ha perdido 10 puntos de vida. Vida restante: 0
+Meganman ha muerto.
+Dittuu ha seleccionado el poder CañonDeHielo
+Dittuu ha seleccionado el poder CañonDeHielo
+Korby ha atacado a  Dittuu con un ataque torbellino
 Dittuu ha perdido 10 puntos de vida. Vida restante: 0
 Dittuu ha muerto.
-Korby ha seleccionado el poder AtaqueTorbellino
-Korby ha seleccionado el poder CañonDeHielo
-Meganman ha seleccionado el poder BombaDeEnergia
-Korby ha seleccionado el poder AtaqueFuego
-Korby ha lanzado un ataque de fuego hacia Meganman
-Meganman ha perdido 10 puntos de vida. Vida restante: 70
-Meganman ha seleccionado el poder BombaDeEnergia
-Meganman ha seleccionado el poder RayoElectrico
-Meganman ha seleccionado el poder RayoElectrico
-Korby ha seleccionado el poder CañonDeHielo
-Meganman ha seleccionado el poder RayoElectrico
-Korby ha seleccionado el poder AtaqueFuego
-Meganman ha seleccionado el poder BombaDeEnergia
-Korby ha lanzado un ataque de fuego hacia Meganman
-Meganman ha perdido 10 puntos de vida. Vida restante: 60
-Meganman ha lanzado una Bomba de Energía a  Korby
-Korby ha perdido 10 puntos de vida. Vida restante: 10
-Korby ha seleccionado el poder AtaqueFuego
-Meganman ha seleccionado el poder RayoElectrico
-Meganmanha atacado con un Rayo Electrico a Korby
-Korby ha perdido 10 puntos de vida. Vida restante: 0
-Korby ha muerto.
 Perdió el personaje que apoyaste.
