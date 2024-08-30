@@ -1,5 +1,5 @@
 Nombre del Equipo: 
-                      Equipo sin nombre
+                      equipo sin nombre 2
 
 Integrantes del Equipo:                                    Numero de cuenta
 
