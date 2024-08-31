@@ -15,7 +15,7 @@ public abstract class Nientiendo extends Personaje {
      * @param mediador El mediador que gestionará las notificaciones a los observadores.
      */
     public Nientiendo(String nombre, int vida, MediadorCombate mediador) {
-        super(nombre, vida, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
+        super(nombre, vida, new AtaqueFuego(), new AtaqueTorbellino(), new CanionDeHielo(), mediador);
     }
 
 }

@@ -15,7 +15,7 @@ public abstract class Chinpokomon extends Personaje {
      * @param mediador El mediador que gestionará las notificaciones a los observadores.
      */
     public Chinpokomon(String nombre, int vida, MediadorCombate mediador) {
-        super(nombre, vida, new AtaqueFuego(), new AtaqueTorbellino(), new CañonDeHielo(), mediador);
+        super(nombre, vida, new AtaqueFuego(), new AtaqueTorbellino(), new CanionDeHielo(), mediador);
     }
 
     // Los poderes son específicos de Chinpokomon, y no pueden ser modificados en las clases derivadas
